@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            max-width: 100%;
+        }
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1vw;
+            align-items: center;
+        }
+
+        .h2 {
+            text-align: center;
+            color: #f4f4f4;
+            position: absolute;
+            left: 2vw;
+        }
+
+        nav {
+            position: sticky 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            align-items: center;
+            min-width: 100%;
+            background-color: #070707;
+            color: #f4f4f4;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 18px;
+            display: block;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #8e8888;
+            text-decoration-line: underline;
+            border-radius: .5vw;
+        }
+
+        /* About Page */
+
+        .container1 {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            padding-top: 2px;
+            /* box-shadow: 7px 7px 10px rgb(201, 19, 146); */
+        }
+
+        .container1:hover {
+            box-shadow: 7px 7px 10px rgb(79, 79, 165);
+            width: 80%;
+        }
+
+        .div1 {
+            color: rgb(76, 95, 155);
+            text-align: right;
+            width: 98%;
+
+        }
+
+        .div1-1 {
+            width: 0px;
+            border: none;
+        }
+
+
+
+
+        .content1 {
+            width: 100%;
+            /* text-align: right; */
+            display: flex;
+            justify-content: space-between;
+            /* align-items: flex-start; */
+
+        }
+
+        p {
+
+            /* text-align: right; */
+            width: 55%;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        .resume {
+            text-align: center;
+        }
+
+        button {
+            width: 12% auto;
+            margin: 0px;
+            padding: 10px;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 6px;
+            color: white;
+            background: rgb(70, 76, 164);
+            border-style: none;
+        }
+
+        button:hover {
+            background: rgb(6, 21, 228);
+        }
+
+        /* Contact */
+
+        .container_contact {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: right;
+            font-size: 1rem;
+            font-weight: bold;
+            /* box-shadow: 7px 7px 10px rgb(201, 19, 146); */
+
+        }
+
+        .container_contact:hover {
+            box-shadow: 7px 7px 10px rgb(79, 79, 165);
+            width: 80%;
+        }
+
+        .container_contact ul {
+            list-style: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .container_contact li a {
+            text-decoration: none;
+        }
+
+        .contact-main {
+            display: flex;
+            padding: 1% 20%;
+            padding-left: 30vw;
+            justify-content: space-between;
+        }
+
+        .contact-left {
+            text-align: left;
+            width: 40%;
+        }
+
+        .contact-right {
+            text-align: left;
+            width: 60%;
+
+        }
+
+
+        /*  */
+        .container {
+            width: 905;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 7px 7px 10px rgb(201, 19, 146); */
+
+        }
+
+        h1,
+        h2,
+        p {
+            color: #000000;
+        }
+
+        /* Home */
+        .container2 {
+            width: 90%;
+            height: 60vh;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 7px 7px 10px rgb(201, 19, 146); */
+
+        }
+
+        .container2:hover {
+            box-shadow: 7px 7px 10px rgb(79, 79, 165);
+            width: 80%;
+        }
+
+        .purple {
+            color: blue;
+        }
+
+        .element {
+            color: rgb(255, 0, 0);
+
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            padding-top: 4vw;
+            padding-left: 2vw;
+        }
+
+        .buttons {
+            font-size: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 25px;
+        }
+
+        .btn {
+            border-radius: 10vw;
+            margin-left: 3vw;
+        }
+
+        .btn1 {
+            border-radius: 10vw;
+        }
+
+        /* skills */
+        .container3 {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 7px 7px 10px rgb(201, 19, 146); */
+        }
+
+        .container3:hover {
+            box-shadow: 7px 7px 10px rgb(79, 79, 165);
+            width: 80%;
+        }
+
+        .skillbox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skill-icon {
+            width: 10vw;
+            padding: 8vw;
+            text-align: center;
+        }
+
+        .skill-tital {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* education */
+        .container4 {
+            max-width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 7px 7px 10px rgb(73, 129, 180); */
+        }
+
+        .container4:hover {
+            box-shadow: 7px 7px 10px rgb(79, 79, 165);
+            width: 80%;
+        }
+
+        .education1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .education-img {
+            width: 90%;
+            height: 29.6vh;
+            border-radius: 4px;
+            display: flex;
+            background: #e3e0e0;
+            text-align: center;
+        }
+
+        .education1 h1 {
+            width: auto;
+            padding-left: 20px;
+        }
+
+        .education h4 {
+            width: auto;
+            position: relative;
+        }
+
+        .education2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
+
+        .education-img2 {
+            width: 90%;
+            height: 29.6vh;
+            border-radius: 4px;
+            display: flex;
+            background: #e3e0e0;
+            text-align: center;
+        }
+
+        .education2 h1 {
+            width: auto;
+            padding-left: 20px;
+        }
+
+        .education h4 {
+            width: auto;
+            position: relative;
+            /* right: 33vw;
+        top: 5vw;             */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2 class="h2">
+                Bhanu Pratap Singh
+            </h2>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container2" id="home">
+        <center>
+            <h2>Home</h2>
+        </center>
+        <div class="leftSection">
+            Hi, I'm <span class="purple">Bhanu Pratap Singh Rajawat</span>
+            <div>I Am Into <span class="element"></span>
+            </div>
+            <div class="buttons">
+                <a href="file:///C:/Users/lenovo/Downloads/Bhanu%20Pratap%20Singh.pdf" download><button class="btn1">Get Resume</button></a><br>
+                <br>
+                <a href=""><button class="btn"> Visit Github </button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1" id="about">
+        <center>
+            <h2>About Me</h2>
+        </center>
+        <br>
+        <div class="content1">
+            <div class="div1-1"><img src="C:\Users\lenovo\Desktop\bhanu.png" height="200px" width="150px"
+                    style="border-radius: 13px;" alt=""></div>
+
+            <p>
+                I am a Bhanu Pratap Singh from Jaipur, Rajasthan. I am an Information Technology undergraduate
+                student
+                from
+                MAISM. I am very passionate about improving my coding skills & developing applications & websites. I
+                build
+                and Websites using HTML, Css, Bootstrap, Java script, Php, My Sql. Working for myself to improve my
+                skills.
+                Love to build Full-Stack clones.
+            </p>
+        </div>
+        <div class="div1">Email : pratapsinghbhanu484@gmail.com
+            <br>
+            <br>
+            Place : Jaipur,Rajasthan-302012
+
+            <div class="resume"><a href="file:///C:/Users/lenovo/Downloads/Bhanu%20Pratap%20Singh.pdf"><button>
+                    Resume</button></div></a>
+        </div>
+    </div>
+
+    <div class="container3" id="skills">
+        <center>
+            <h2>Skills</h2>
+        </center>
+        <div class="skillbox">
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/768px-HTML5_Badge.svg.png?20110131171049"
+                            alt="" class="skill-icon">
+                    </div>
+                    <h3>HTML</h3>
+                </div>
+            </div>
+
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/768px-CSS3_logo.svg.png?20210705212817"
+                            alt="" class="skill-icon">
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+            </div>
+
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEXw208yMzDw2kvz43zx3Vjz4nT131AvMTAeIy5CQTLSv0
+                        n34VD44lAnKi8sLi9yajkqLC8bIC4jJy8XHi7q1k55cTrfzExKSDOwokPZx0vDs0c9PTJ2bzq1p0TKuUiDejxmYDeLgT2Vij9QTTQ5OTGom0JcWDabj0BjXjejlkFYVDXd
+                        ykvl0U2zpUT16JYTGy4IFC3e0EHdAAAIn0lEQVR4nO2c2XbquBKG7dN9JIEGbBnMaMYwBad3v//TtZ2QBHDJFlOWKkv/zb7YpNCH5qpSBX/9cv0T/O+X6//BL5cnxC9PiF+
+                        eEL88IX55QvzyhPjlCfHLE+KXJ8QvT4hfnhC/PCF+eUL88oT45QnxyxPilyfEL0+IX54QvzwhfnlC/PKE+OUJ8csT4pcnxC9PiF+eEL88IX55QvzyhPjlCfHLE+KXJ8QvT4h
+                        fnhC/PCF+eUL88oT45QnxyxPilyfEL0+IX54QvzwhfnlC/PKE+OUJ8csT4pcnxC8chITwQoR8/XvF3/4UoeCArBpaQHXbg2Vvt2oVWu06i/3oENj9bakfIiS9TlXzYWMzC7z
+                        2cqOYlpFStJSKpGZs3Bnkwg7ypwjHMqroT7uhjUSky5dEq7AiGulkkwXc4qt/irBFq81kDYR8OGEa+LujFHvZB8396C4h787iyIj30ZP6JWuckM4SikzJer53xmSeNyA6SkhI
+                        LzaPz1PJcCpqv9pNQpKvtBXfezcOahccJwlJPm6YgWdK9nWILhIWgMAGUYtYM1BdJAxW1/RgqT+ZuRcdJBQT6znY/GO5SMjfkqsBQ/rSNX21e4RdardNnEt2TOPUOUIxs9joA
+                        cVvBkTXCMkhvgkwpKFhnLpGeGsXFtZ6cCe6Rtg1bhRUSV1cE02TVPen8HLqGCEZMBhAxbSz3G6Xk1YCXahUsjS5Nhwj5HPwNEPZfMoFL278QqT7cWW/ZK9D46nGMcIuOAupzL
+                        5dFoQHy+TMWqT3NbdEtwjJFFpJqWqfLyJiqr7N0Xie4zl5kz10YEtGlwR8+IUow6zeJeUWoegBS6naVecYP3Y2TSbdBneUW4T8FVho2Ag6+qzLRVePR/UX/MA1QvEC7QTgYYX
+                        vlEoW6HxtBDh10xVIQdJ/+22E/lJgkKpXmIOMLDowwEBIV4aesoxcOEYIjdKX+77aLUIRQh9rDuDUyTHCPvAxvbVZUIxyixA8eNPwrq92jBC8/8pe47ZeI7cIyRp0JLLlHePU
+                        MULwblF6KK4K3Z/JLULD/bBYbVpT+8j9uRwjLE6bMKKKe+ltjI4RGiZiKclmqWVywpkcIwzSmpiFZL329YyuEfJOXdwpYpsRuXJddY2QTOvjMioe720zaT7kGmEgNg3RUaqj2
+                        fAKRucISbs5cCGTYrDaMjpHGIiZRYBUxf2B5QXRPcIggJw1VUY2Xlv1o4OEpG2IXVyIsvHAgtFBwoAP/lghFoz9UeOa4yJhIPa2oXyV7A6oPMKfElvrbIVIb+uHqpuEAV8nNsv
+                        Nh5lVbTc6ShiIUWSdF6X0AFtOVCl+sE/eC5MFqpyozz8hS2bdjWxu3P/dJSxGarvPbGej3pgQXSYsunFNbYeq3BiMOE1YJnsvtWWCje7Ay43jhAVjvtA1CfsnircgovOExXTMl
+                        6HVfIzBnCEEhOVYXbeS5nVVtdASlkk007mWTR3JoBgOEsLyhdBwoRomJIVC/mgIy34sBmv9IQAKxCEiLM2Q0SauYYTixbgIPybkHzNjXM29wUZYTsj23PhiKKqGGvERloyjagL
+                        mcZiGv6AP380FM4NXNa7YxElY5rXBiHrwWwgLRNCVIyt3YbSEhqx+Nf89hEFXATZp/9eM0qITF0AnVvd8VwnFodnmCPL+V46mjyU0+mbJ+LpXssHyX9M7pu8PpRChzC8+9lBCf
+                        jC2+ZqUPELeQk1V0yNtODVFP5GQkD0z5YLmUGNYCpoR7dfySh9VVsVL/TShmLZYGMPvquGAWXTZmFI87x1P1gz2u3wbhUfps+Zh0bDyWmN4I0cGwDkSuuqQYCu/eiauvLM4/2w
+                        GEFYTGR9DSMj62DA4jxB+R1EZ0kRkp0dqyqZ1iGBiypP2Qz5dfTnDEuhZNfjyNbp82Crau/OIE5U1iGQIbhbPONOUJTrUSavSarbaGpwx5zmVhZmKi4KyzDgX+Qq6CD/hXErIQ
+                        J6taap1ucwT8HwVsoycmllLaGk0PRohpANeEfXbo0fpcWk/VdRKz35HEmzATK7kdLNIWwanr+5PgVA9z3fwHTiu7LH3EZ4P0E+p6KRqDBGHFfyocHz2O/RNzhcVz6fkLPGS8GA
+                        fwelvtFWZuHcRkkEI/pI0fn3LuSjEu9MZVAUpvJwxZGROhVJxfznt8o9iWqXJRWhynFan4X2E3FjfQWnZn086uz5lptDRRZSBd2piTFQyteosltvlorNSzOz8TqrHxvv68FCT
+                        20NVFIErzPG/xxe2cuMz7U97UmppfsxdCnojdd88FIvri3QcpS/z72+qh3GhOKsuSneupV3ozmAlVtk2ee/mn+soVTnQ3E9IshuLPMhZdTyR/rV1aS6UQK9N794PJ7dVeWDA
+                        7Y/kL9fVFrqQBOPc95/arqx4dAQEX2uRYcNqUytDjZr7T21Duyj7mdTKYKwtb+/FBC6McX8f8pq92iCqD6YqX8PwVsTk7Wm5GCKzz7I7NsZ8tSV5/7YVNVkbbiGPuB+KzDp1
+                        qb4x74jBxLLa3qloYkzee9ANWNmPLVoLWEgM5LW7RkTNlQce5MVIV3a52eWJtbEMAk93V4374qBf43l8kCeKcMtEwoZ016M1kZmui4C0Wte9anuYN1EMd81JPZLt7V6CkGA9
+                        rktJ+BKV8ay2eMsD/aWEj15rS6pSrRsac2aOZJu6CrTvUowu8oZB/0ivPuHTnmTwsYTKZLxMrfnezYnhsp9o0w2MRoztBt0ffo1ARDebhExL9e0+LO6JmrHW4sIVYWWOk+G6
+                        EzKmo1ODHxZfJoPcxuLDo2uEB8PBYt4Py6LURdvU+HWyHaXixme8hAgyzLa9TevToAxbm952dLD9wZ4RPywrp5Ogmw6Hw0PeDWxLk9faK8Z3Nz0UFtO8LPLN7d92PzNCSq4r
+                        D/8kgzjq6t8jT4hfnhC/PCF+eUL88oT45QnxyxPiV0H49y/XX/8B51Sbqi+5TiEAAAAASUVORK5CYII="
+                            style="border-radius: 10vw;" alt="" class="skill-icon">
+                    </div>
+                    <h3>JAVASCRIPT</h3>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="C:\Users\lenovo\Downloads\wordpress-removebg-preview.png" alt="" class="skill-icon">
+                    </div>
+                    <h3>WORDPRESS</h3>
+                </div>
+            </div>
+
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="C:\Users\lenovo\Downloads\photoshop-removebg-preview.png" alt="" class="skill-icon">
+                    </div>
+                    <h3>PHOTOSHOP</h3>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png?20201023095457" alt=""
+                            class="skill-icon">
+                    </div>
+                    <h3>C</h3>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-tital">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png?20210130181641"
+                            alt="" class="skill-icon">
+                    </div>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container4" id="education">
+        <center>
+            <h2>Education</h2>
+        </center>
+        <div>
+            <center>
+                <p>Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.</p>
+            </center>
+            <div class="education1">
+                <div class="education-img">
+                    <img src="C:\Users\lenovo\Downloads\bright-future-senior-secondary-school.png" height=""
+                        style="border-radius: 4px; ">
+                    <div class="education-text">
+                        <h1>Bright Future Senior Secondary School </h1>
+                        <h4>2019-2021 | Completed</h4>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="education2">
+                <div class="education-img2">
+                    <img src="C:\Users\lenovo\Downloads\maharishi arvind.png" height="" style="border-radius: 4px; ">
+                    <div class="education-text">
+                        <h1>Maharishi Arvind Institute of Science & Management</h1>
+                        <h4>2021-2024 | Pursuing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_contact" id="contact">
+        <center>
+            <h2>Contact</h2>
+        </center>
+        <p></p>
+        <div class="contact-main">
+            <div class="contact-left">
+                <ul>
+                    <li style="text-decoration: underline 2px;">Quick Links</li>
+                    <br>
+                    <li><a href="#home">Home</a></li>
+                    <br>
+                    <li><a href="#about">About</a></li>
+                    <br>
+                    <li><a href="#skills">Skills</a></li>
+                    <br>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </div>
+            <div class="contact-right">
+                <ul>
+                    <li style="text-decoration: underline 2px;">Contact Info</li>
+                    <br>
+                    <li>+91 XXX-XXX-XXXX</li>
+                    <br>
+                    <li>pratapsinghbhanu484@gmail.com</li>
+                    <br>
+                    <li>Rajasthan, India-302012</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: [" Frontend Development", ' Web Development', ' Web Designing', ' Backend Development'],
+            typeSpeed: 80,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
